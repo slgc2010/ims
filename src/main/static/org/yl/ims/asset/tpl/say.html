@@ -1,0 +1,18 @@
+<div class="container-fluid" ng-controller="sayController"
+	ng-init="doGetMore()">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="cd-timeline-block feed" ng-repeat="item in shuoshuo">
+				<!--<div class="cd-timeline-img cd-picture">
+				<img src="{{item.imageUrl}}" alt="Picture">
+			</div>-->
+				<div class="cd-timeline-content">
+					<h2>{{item.title}}</h2>
+					<p>{{item.content}}</p>
+					<a href="javascript:;" class="cd-read-more" target="_blank">{{item.tag}}</a>
+					<span class="cd-date" style="color:red">{{item.createTime}}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

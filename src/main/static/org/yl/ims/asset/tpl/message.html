@@ -1,0 +1,37 @@
+<section class="wrapper" ng-controller="msgManagerController" ng-init="doGetMore()">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="content-panel">
+				<h4>展示信息管理</h4>
+				<hr>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>#</th>
+							<td>内容</td>
+							<td>是否启用</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="item in messages">
+							<th>{{$index+1}}</th>
+							<td>{{item.messageinfo}}</td>
+							<td><a href="javascript:;" ng-click="isShow(item)"><span
+									ng-show="isOpen(item)" class="label label-danger">停用</span></a> <a
+								href="javascript:;" ng-click="isShow(item)"><span
+									ng-show="isClose(item)" class="label label-primary">启用</span></a></td>
+						</tr>
+					</tbody>
+				</table>
+				<nav>
+					<ul class="pager">
+						<li><a href="javascript:;" ng-click="prev();">Previous</a></li>
+						<li><a href="javascript:;" ng-click="next();">Next</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!-- --/content-panel ---->
+		</div>
+		<!-- /col-md-12 -->
+	</div>
+</section>

@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="imessage">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />o
+<meta name="keywords" content="那伤已绝版,借口伤了谁,那些年,雨落泪,粟园林,1515663381,314078331,77905471" />
+<meta name="description" content="很多年，很多事,我的个人博客" />
+<title>很多年，很多事</title>
+<link href="${imsPath}/asset/favicon.ico" type="image/x-icon" rel=icon>
+<link href="${imsPath}/asset/favicon.ico" type="image/x-icon"
+	rel="shortcut icon">
+<link href="${imsPath}/asset/css/bootstrap.min.css" media="screen"
+	rel="stylesheet" type="text/css" />
+<link href="${imsPath}/asset/css/style.css" media="screen"
+	rel="stylesheet" type="text/css" />
+
+<link href="${imsPath}/asset/css/timeline.css" media="screen"
+	rel="stylesheet" type="text/css" />
+<link href="http://www.yunlinsu.com/style/default.css" media="screen"
+	rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="${imsPath}/asset/js/previewCount.js"></script>
+<script type="text/javascript" src="${imsPath}/asset/js/jquery.min.js"></script>
+<script type="text/javascript"
+	src="${imsPath}/asset/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${imsPath}/asset/js/angular.min.js"></script>
+<script type="text/javascript"
+	src="${imsPath}/asset/js/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="${imsPath}/asset/js/scroll.js"></script>
+<script type="text/javascript">
+	(function() {
+		var config = angular.module('config', []);
+		var cfg = {};
+		cfg.root = '${rootPath}';
+		cfg.ims = cfg.root + '/guest';
+		cfg.path = window.path = {};
+		cfg.path.ims = cfg.ims;
+		config.constant('cfg', cfg);
+	})();
+</script>
+<script type="text/javascript" src="${imsPath}/asset/js/imessage.js"></script>
+<script type="text/javascript"
+	src="${imsPath}/asset/js/ims-controller.js"></script>
+</head>
+<body>
+	<div class="loading" style="text-align: center;margin-top: 30%;">
+		<img alt="loading...." src="/asset/images/loading.gif" />
+	</div>
+	<div id="dasky" ng-controller="sayController" ng-init="doGetMore()">
+		<div class="step year" ng-show="shuoshuo.length == 0">
+			<!--<div class="dsk-titlenode">{{cYear}}</div>-->
+			<div class="dsk-titlenode">{{cYear}}</div>
+			<div class="dsk-content">
+				<p class="dsk-year-info">I like you ,but just like you</p>
+			</div>
+		</div>
+
+		<div class="step year" ng-repeat="item in shuoshuo">
+			<div class="dsk-titlenode" ng-show="item.year != null">{{item.year}}</div>
+			<div class="dsk-circle" ng-show="item.year == null">{{item.createTime | date:"MM-dd"}}</div>
+			<h2 class="dsk-circle-title">{{item.title}}</h2>
+			<div class="dsk-content">
+				<div class="dsk-info">
+					<h2>{{item.title}}</h2>
+					<p>{{item.content}}</p>
+					<a href="javascript:;" class="dsk-link">{{item.tag}}</a>
+				</div>
+				<img class="img-circle"
+					ng-src="http://q2.qlogo.cn/headimg_dl?bs=qq&dst_uin=1060615684&src_uin=1060615684&fid=1060615684&spec=100&url_enc=0&referer=bu_interface&term_type=PC"
+					alt="" />
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="${imsPath}/asset/js/jmpress.min.js"></script>
+<script type="text/javascript" src="${imsPath}/asset/js/tileline.js"></script>
+</html>

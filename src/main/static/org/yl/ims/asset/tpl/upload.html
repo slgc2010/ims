@@ -1,0 +1,10 @@
+<div ng-controller="fileController">
+	<form id="fileUpload" action="/fileapi/upload" method="post"
+		enctype="multipart/form-data">
+		<div class="form-group">
+			<input type="file" name="fileToUpload" id="fileToUpload"><br> <input
+				type="button" class="btn btn-default" value="submit" ng-click="upload()">
+		</div>
+	</form>
+	<div id="imgBox"></div>
+</div>

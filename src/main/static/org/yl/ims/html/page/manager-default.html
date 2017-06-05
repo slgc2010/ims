@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh" ng-app="imessage">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Dashboard">
+<title>DASHGUM - FREE Bootstrap Admin Template</title>
+<link href="${imsPath}/asset/favicon.ico" type="image/x-icon" rel=icon>
+<link href="${imsPath}/asset/favicon.ico" type="image/x-icon" rel="shortcut icon">
+<link href="${imsPath}/asset/css/bootstrap.min.css" media="screen" rel="stylesheet"
+	type="text/css" />
+<link href="${imsPath}/asset/css/manager/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css"
+	href="${imsPath}/asset/css/manager//zabuto_calendar.css">
+<link rel="stylesheet" type="text/css"
+	href="${imsPath}/asset/css/manager//jquery.gritter.css">
+<link rel="stylesheet" type="text/css" href="${imsPath}/asset/css/manager/style.css">
+<link href="${imsPath}/asset/css/manager/blacktie-style.css" rel="stylesheet">
+<link href="${imsPath}/asset/css/manager/blacktie-style-responsive.css" rel="stylesheet">
+<script type="text/javascript" src="${imsPath}/asset/js/previewCount.js"></script>
+<script type="text/javascript" src="${imsPath}/asset/js/jquery.min.js"></script>
+<script type="text/javascript" src="${imsPath}/asset/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${imsPath}/asset/js/angular.min.js"></script>
+<script type="text/javascript" src="${imsPath}/asset/js/angular-ui-router.min.js"></script>
+<!-- <script type="text/javascript" src="${imsPath}/asset/js/scroll.js"></script> -->
+
+<!-- ue -->
+<script type="text/javascript" charset="utf-8"
+	src="${imsPath}/asset/js/ue/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8"
+	src="${imsPath}/asset/js/ue/ueditor.all.min.js"></script>
+<script type="text/javascript" charset="utf-8"
+	src="${imsPath}/asset/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript">
+	(function() {
+		var config = angular.module('config', []);
+		var cfg = {};
+		cfg.root = '${rootPath}';
+		cfg.ims = cfg.root + '/guest';
+		cfg.path = window.path = {};
+		cfg.path.ims = cfg.ims;
+		config.constant('cfg', cfg);
+	})();
+</script>
+<script type="text/javascript" src="${imsPath}/asset/js/imessage.js"></script>
+<script type="text/javascript" src="${imsPath}/asset/js/ims-controller.js"></script>
+<!-- <script type="text/javascript" src="${imsPath}/asset/js/controller.js"></script> -->
+</head>
+<body>
+	<section id="container" class="">
+		<!--header start-->
+		<header class="header black-bg">
+			<div class="sidebar-toggle-box">
+				<div class="fa fa-bars tooltips" data-placement="right"
+					data-original-title="Imessage Navigation"></div>
+			</div>
+			<!--logo start-->
+			<a href="/guest#/blog" class="logo"><b>就是在我青春年华里遇到你</b></a>
+			<!--logo end-->
+			<div class="nav notify-row" id="top_menu">
+				<!--  notification start -->
+				<ul class="nav top-menu">
+					<!-- settings start -->
+					<li class="dropdown"><a data-toggle="dropdown"
+						class="dropdown-toggle" href=""> <i class="fa fa-tasks"></i> <span
+							class="badge bg-theme">4</span>
+					</a>
+						<ul class="dropdown-menu extended tasks-bar">
+							<div class="notify-arrow notify-arrow-green"></div>
+							<li>
+								<p class="green">您有4个任务</p>
+							</li>
+							<li><a href="">
+									<div class="task-info">
+										<div class="desc">任务面板标题</div>
+										<div class="percent">40%</div>
+									</div>
+									<div class="progress progress-striped">
+										<div class="progress-bar progress-bar-success"
+											role="progressbar" aria-valuenow="40" aria-valuemin="0"
+											aria-valuemax="100" style="width: 40%">
+											<span class="sr-only">40% Complete (success)</span>
+										</div>
+									</div>
+							</a></li>
+
+						</ul></li>
+					<!-- settings end -->
+					<!-- inbox dropdown start-->
+					<li id="header_inbox_bar" class="dropdown"><a
+						data-toggle="dropdown" class="dropdown-toggle" href=""> <i
+							class="fa fa-envelope-o"></i> <span class="badge bg-theme">5</span>
+					</a>
+						<ul class="dropdown-menu extended inbox">
+							<div class="notify-arrow notify-arrow-green"></div>
+							<li>
+								<p class="green">您有5条消息</p>
+							</li>
+							<li><a href=""> <span class="photo"><img
+										alt="avatar" src="${imsPath}/asset/images/manager/ui-zac.jpg"></span> <span
+									class="subject"> <span class="from">发送者</span> <span
+										class="time">时间</span>
+								</span> <span class="message"> 您好，有种子吗 </span>
+							</a></li>
+						</ul></li>
+					<!-- inbox dropdown end -->
+				</ul>
+				<!--  notification end -->
+			</div>
+			<div class="top-menu">
+				<ul class="nav pull-right top-menu">
+					<li><a class="logout" href="">Logout</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<!--sidebar begin-->
+		<aside>
+			<div id="sidebar" class="nav-collapse " style="margin-left: 0px;">
+				<!-- sidebar menu start-->
+				<ul class="sidebar-menu" id="nav-accordion" style="display: block;">
+					<p class="centered">
+						<a href="/guest#/blog"><img src="${imsPath}/asset/images/manager/ui-sam.jpg"
+							class="img-circle" width="60"></a>
+					</p>
+					<h5 class="centered">IMESSAAGE</h5>
+
+					<li class="mt"><a class="" href="#/admin"> <i
+							class="fa fa-dashboard"></i> <span>首页</span>
+					</a></li>
+
+					<li class="sub-menu dcjq-parent-li"><a href="#/managerArticle"
+						class="dcjq-parent"> <i class="fa fa-desktop"></i> <span>日志管理</span>
+							<span class="dcjq-icon"></span></a>
+					<!--<li class="sub-menu dcjq-parent-li"><a href="#/managerArticle"
+														   class="dcjq-parent"> <i class="fa fa-desktop"></i> <span>日志管理</span>
+						<span class="dcjq-icon"></span></a>-->
+						<ul class="sub" style="display: none;">
+							<li><a href=""></a></li>
+							<li><a href="">Buttons</a></li>
+							<li><a href="">Panels</a></li>
+						</ul></li>
+
+
+						<a href="#/user"
+						   class="dcjq-parent"> <i class="fa fa-desktop"></i> <span>用户管理</span>
+							<span class="dcjq-icon"></span></a>
+
+					<ul class="sub" style="display: none;">
+							<li><a href=""></a></li>
+							<li><a href="">Buttons</a></li>
+							<li><a href="">Panels</a></li>
+						</ul></li>
+
+					<li class="sub-menu dcjq-parent-li"><a href="https://wx.qq.com/"
+						class="dcjq-parent"> <i class="fa fa-cogs"></i> <span>微信</span>
+							<span class="dcjq-icon"></span></a>
+						<ul class="sub" style="display: none;">
+							<li><a href="">Calendar</a></li>
+							<li><a href="">Gallery</a></li>
+							<li><a href="">Todo List</a></li>
+						</ul></li>
+
+
+						<a href="#/message"
+						   class="dcjq-parent"> <i class=" fa fa-bar-chart-o"></i> <span>展示信息管理</span>
+							<span class="dcjq-icon"></span></a>
+						<ul class="sub" style="display: none;">
+							<li><a href="">Morris</a></li>
+							<li><a href="">Chartjs</a></li>
+						</ul></li>
+
+					<li class="sub-menu dcjq-parent-li"><a href="http://fm.baidu.com/"
+						class="dcjq-parent"> <i class="fa fa-tasks"></i> <span>百度音乐API</span>
+							<span class="dcjq-icon"></span></a>
+						<ul class="sub" style="display: none;">
+							<li><a href="">Form Components</a></li>
+						</ul></li>
+					<li class="sub-menu dcjq-parent-li"><a href="/erro#/blog"
+						class="dcjq-parent"> <i class="fa fa-th"></i> <span>在线机器人Chat</span>
+							<span class="dcjq-icon"></span></a>
+						<ul class="sub" style="display: none;">
+							<li><a href="">Basic Table</a></li>
+							<li><a href="">Responsive Table</a></li>
+						</ul></li>
+					<li class="sub-menu dcjq-parent-li"><a href="/user#/blog"
+						class="dcjq-parent"> <i class=" fa fa-bar-chart-o"></i> <span>关于我</span>
+							<span class="dcjq-icon"></span></a>
+						<ul class="sub" style="display: none;">
+							<li><a href="">Morris</a></li>
+							<li><a href="">Chartjs</a></li>
+						</ul></li>
+				</ul>
+				<!-- sidebar menu end-->
+			</div>
+		</aside>
+		<!--sidebar end-->
+
+		<!--main content start-->
+		<section id="main-content" style="margin-left: 210px;">
+			<div ui-view></div>
+		</section>
+		<!--main content end-->
+
+		<!--footer start-->
+		<div ng-include="'${imsPath}/asset/tpl/footer.html'"></div>
+		<!--footer end-->
+	</section>
+
+
+</body>
+</html>

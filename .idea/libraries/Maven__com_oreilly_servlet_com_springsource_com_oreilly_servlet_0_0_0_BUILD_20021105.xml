@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.oreilly.servlet:com.springsource.com.oreilly.servlet:0.0.0.BUILD-20021105">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/oreilly/servlet/com.springsource.com.oreilly.servlet/0.0.0.BUILD-20021105/com.springsource.com.oreilly.servlet-0.0.0.BUILD-20021105.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/oreilly/servlet/com.springsource.com.oreilly.servlet/0.0.0.BUILD-20021105/com.springsource.com.oreilly.servlet-0.0.0.BUILD-20021105-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/oreilly/servlet/com.springsource.com.oreilly.servlet/0.0.0.BUILD-20021105/com.springsource.com.oreilly.servlet-0.0.0.BUILD-20021105-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

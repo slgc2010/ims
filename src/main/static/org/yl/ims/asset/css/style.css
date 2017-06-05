@@ -1,0 +1,335 @@
+@CHARSET "UTF-8";
+
+/**index style***/
+body {
+	background-color: #e5e5e5;
+	background: url("/asset/images/common/mooning.jpg");
+}
+
+.hero-unit {
+	position: relative;
+	background: url("http://qxw1099210104.my3w.com/bg/bg.jpg");
+	height: 300px;
+	background-size: cover; /*cover: 保持图像本身的宽高比例，将图片缩放到正好完全覆盖定义背景的区域*/
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+/* 	display: none */
+}
+
+.hero-unit h1 {
+	text-align: center;
+	text-shadow: 1px 1px 10px black;
+}
+
+.hero-unit  img {
+	max-width: 500px;
+	-webkit-animation: title-in 1s ease-out 0 1 forwards;
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	transition: 500ms;
+}
+
+.hero-unit img:hover {
+	-webkit-transform: translateY(-5px) scale(1.05) rotate(2deg);
+	-moz-transform: translateY(-5px) scale(1.05) rotate(2deg);
+	transform: translateY(-5px) scale(1.05) rotate(2deg);
+}
+
+.hero-unit .banner-link {
+	position: absolute;
+	right: 5px;
+	bottom: 8px;
+	font: 200 12px/1.8 'Optima', 'Verdana', 'Microsoft Yahei', sans-serif;
+	text-align: right;
+	text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-unit .banner-link a {
+	color: white;
+	color: rgba(255, 255, 255, 0.9);
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	transition: 500ms;
+}
+
+.hero-unit .banner-link a:hover {
+	color: white;
+}
+
+.no-radius {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+.panel {
+	border-radius: 6px;
+	margin-bottom: 15px;
+	background-color: #FFF;
+	background: url("/asset/images/common/white_wall_hash.jpg");
+	box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px
+		rgba(0, 0, 0, 0.25);
+	-webkit-animation: panel-in 1s linear 0 1;
+}
+
+.block-left {
+	padding: 35px 10px 15px 45px
+}
+
+.block-span-left {
+	padding: 0px 10px 15px 15px
+}
+
+.replyinfo {
+	width: 94%;
+	float: right;
+}
+
+.margin-d30 {
+	margin-top: -30px
+}
+
+.show_user_images_item {
+	width: 40px;
+	height: 40px;
+	padding-right: 5px;
+}
+
+.show_reply_context {
+	margin-left: 30px;
+}
+
+/*置顶*/
+#totop {
+	position: fixed;
+	bottom: 70px;
+	right: 10px;
+	z-index: 999;
+	width: 71px;
+	cursor: pointer;
+	display: none;
+}
+
+#totop {
+	position: fixed;
+	cursor: pointer;
+	right: 10px;
+	display: none;
+	top: expression(eval(document.documentElement.scrollTop + 
+		 document.documentElement.clientHeight) -112+"px")
+}
+
+#totop a {
+	display: block;
+	width: 71px;
+	height: 54px;
+	background: url(/asset/images/common/toTop.png) no-repeat
+}
+
+#totop a.cur {
+	background-position: -88px 0;
+	text-decoration: none;
+	color: #3a9
+}
+
+#imsNavigation{
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	z-index: 999;
+	width: 75px;
+	cursor: pointer;
+/* 	display: none; */
+}
+#imsNavigation ul{
+	display:none;
+}
+#imsNavigation img{
+	width:75px
+}
+
+#imsNavigation  img {
+	max-width: 500px;
+	-webkit-animation: title-in 1s ease-out 0 1 forwards;
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	transition: 500ms;
+}
+
+#imsNavigation #imsNavigation img:hover {
+	-webkit-transform: translateY(-5px) scale(1.05) rotate(2deg);
+	-moz-transform: translateY(-5px) scale(1.05) rotate(2deg);
+	transform: translateY(-5px) scale(1.05) rotate(2deg);
+}
+
+/*公共的下边距*/
+.mBottom15 {
+	margin-bottom: 15px;
+}
+
+.mBottom18 {
+	margin-bottom: 18px;
+}
+
+.mBottom20 {
+	margin-bottom: 20px;
+}
+
+.mBottom22 {
+	margin-bottom: 22px;
+}
+
+.mBottom25 {
+	margin-bottom: 25px;
+}
+
+.mTop15 {
+	margin-top: 15px;
+}
+
+.mTop18 {
+	margin-top: 18px;
+}
+
+.mTop20 {
+	margin-top: 20px;
+}
+
+.mTop22 {
+	margin-top: 22px;
+}
+
+.mTop25 {
+	margin-top: 25px;
+}
+
+.input90 {
+	widht: 90%
+}
+
+.input85 {
+	widht: 85%
+}
+
+.input80 {
+	widht: 80%
+}
+
+.input75 {
+	widht: 75%
+}
+
+.input70 {
+	widht: 70%
+}
+
+.input65 {
+	widht: 65%
+}
+
+.input60 {
+	widht: 60%
+}
+
+.input55 {
+	widht: 55%
+}
+
+.input50 {
+	widht: 50%
+}
+
+.input45 {
+	widht: 45%
+}
+
+.input40 {
+	widht: 40%
+}
+
+.input35 {
+	widht: 35%
+}
+
+.input30 {
+	widht: 30%
+}
+
+.input25 {
+	widht: 25%
+}
+
+.input20 {
+	widht: 20%
+}
+
+.input15 {
+	widht: 15%
+}
+
+.input10 {
+	widht: 10%
+}
+
+.input5 {
+	widht: 5%
+}
+
+/*字体颜色设置*/
+.font-color-white {
+	color: white;
+}
+
+/*div 滚动条*/
+.overflow-y {
+	max-height: 525px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.overflow-x {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+/*自动截取字符多余的用省略号代替*/
+.substring500 {
+	max-width: 500px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.substring280 {
+	width: 170px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/*鼠标样式*/
+.mouseCursor {
+	cursor: pointer
+}
+
+/*say页面*/
+.headH {
+	height: 200px;
+}
+
+textarea {
+	width: 90%;
+	height: 100%;
+	line-height: 100%;
+}
+
+.classes {
+	display: none
+}
+
+.center{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}

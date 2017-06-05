@@ -1,0 +1,122 @@
+<section class="wrapper" ng-controller="imessageCountController">
+	<div class="row">
+		<div class="col-lg-9 main-chart">
+
+			<div class="row mt">
+				<div class="col-md-4 col-sm-2 col-md-offset-1  mb">
+					<!-- WHITE PANEL - TOP USER -->
+					<div class="white-panel pn">
+						<div class="white-header">
+							<h5>{{props['os.name']}}</h5>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<p>
+									<b>{{osDataInfo.userName}}</b>
+								</p>
+								<p class="small mt">本地ip地址:{{osDataInfo.ip}}</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<p class="small mt">Java的运行环境版本:{{props['java.version']}}</p>
+								<p class="small mt">Java的运行环境:{{props['java.vendor']}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /col-md-4 -->
+			</div>
+
+			<!-- 统计数量box -->
+			<div class="row mtbox">
+				<div class="col-md-2 col-sm-2 col-md-offset-1 box0">
+					<div class="box1">
+						<span class="li_heart"></span>
+						<h3>{{sayCount}}</h3>
+					</div>
+					<p>共发表了{{sayCount}}条心情说说</p>
+				</div>
+				<div class="col-md-2 col-sm-2 box0">
+					<div class="box1">
+						<span class="li_news"></span>
+						<h3>{{blogCount}}</h3>
+					</div>
+					<p>共发表了{{blogCount}}博客</p>
+				</div>
+				<div class="col-md-2 col-sm-2 box0">
+					<div class="box1">
+						<span class="li_cloud"></span>
+						<h3>{{msgCount}}</h3>
+					</div>
+					<p>共有{{msgCount}}条留言.</p>
+				</div>
+				<div class="col-md-2 col-sm-2 box0">
+					<div class="box1">
+						<span class="li_stack"></span>
+						<h3>{{previewCount}}</h3>
+					</div>
+					<p>网站被浏览{{previewCount}}次</p>
+				</div>
+				<div class="col-md-2 col-sm-2 box0">
+					<div class="box1">
+						<span class="li_data"></span>
+						<h3>{{dataSize}}</h3>
+					</div>
+					<p>JVM可以使用的剩余内存{{dataSize}}kb.</p>
+				</div>
+			</div>
+			<!-- 统计数量box end-->
+
+		</div>
+
+		<div class="col-lg-3 ds">
+			<!--COMPLETED ACTIONS DONUTS CHART-->
+			<h3>今日头条</h3>
+			<!-- First Action -->
+			<div class="desc">
+				<div class="details">
+					<iframe vspace="0" hspace="0" scrolling="no" frameborder="0"
+						id="clip" name="clip" width="250" height="353"
+						src="http://top.baidu.com/clip?b=1&hd_h_info=1&col=1&hd_border=1&hd_meshline=0"></iframe>
+				</div>
+			</div>
+
+			<!-- USERS ONLINE SECTION -->
+			<h3>TEAM MEMBERS</h3>
+			<!-- First Member -->
+			<div class="desc">
+				<div class="thumb">
+					<img class="img-circle" src="/images/manager/ui-divya.jpg"
+						width="35px" height="35px" align="">
+				</div>
+				<div class="details">
+					<p>
+						<a href="">DIVYA MANIAN</a><br>
+						<muted>Available</muted>
+					</p>
+				</div>
+			</div>
+
+
+			<!-- CALENDAR-->
+			<div id="calendar" class="mb">
+				<div class="panel green-panel no-margin">
+					<div class="panel-body">
+						<div id="date-popover" class="popover top"
+							style="cursor: pointer; disadding: block; margin-left: 33%; margin-top: -50px; width: 175px;">
+							<div class="arrow"></div>
+							<h3 class="popover-title" style="disadding: none;"></h3>
+							<div id="date-popover-content" class="popover-content"></div>
+						</div>
+						<div id="my-calendar"></div>
+					</div>
+				</div>
+			</div>
+			<!-- / calendar -->
+
+		</div>
+		<!-- /col-lg-3 -->
+	</div>
+	<!-- --/row ---->
+</section>

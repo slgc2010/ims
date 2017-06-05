@@ -1,0 +1,36 @@
+<div class="container-fluid">
+	<div class="row" ng-controller="imessageContextController"
+		ng-init="doGetMore()">
+		<div class="col-md-8">
+			<div style="text-align: center;" ng-show="isShow">
+				<img alt="loading...." src="/asset/images/loading.gif" />
+			</div>
+			<div class="panel panel-default feed mTop20" ng-show="articles.length == 0">
+				<div class="panel-body text-center">(*>﹏<*)这家伙很懒，啥都没说(*>﹏<*)</div>
+			</div>
+			<div class="panel panel-default feed mTop20"
+				ng-repeat="item in articles">
+				<div class="panel-heading">
+					{{item.title}}<span class="label label-info" style="float: right">{{item.tags}}</span>
+				</div>
+				<div class="panel-body">
+					<div style="float: left" class="{{item.classes}}">
+						<img ng-src="{{item.imageUrl}}"
+							style="max-width: 225px; max-height: 248px; vertical-align: top;" />
+					</div>
+					<div>
+						<span ng-bind-html="item.content | to_trusted"></span>
+					</div>
+				</div>
+				<div class="panel-heading" style="text-align: right;">
+					createTime:{{item.createTime | date: 'yy-MM-dd' }} || Author:<a
+						href="#">{{item.author}}</a>
+				</div>
+			</div>
+		</div>
+		<!--<div class="col-md-4">
+			<div class="ds-thread mTop20" data-thread-key="neptune_01"
+				data-title="message" data-url="http://neptune.coding.io/blog"></div>
+		</div>-->
+	</div>
+</div>

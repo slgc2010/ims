@@ -1,0 +1,41 @@
+<section class="wrapper" ng-controller="fileController"
+	ng-init="loadData()">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="content-panel">
+				<h4>图片信息管理</h4>
+				<hr>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>标题</th>
+							<th>创建时间</th>
+							<th>大小</th>
+							<th>谁上传？</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="item in articles">
+							<td><a href="javascript:;" ng-click="preview(item)">{{item.fileName}}</a></td>
+							<td>{{item.uploadDate | date:"yyyy-MM-dd"}}</td>
+							<td>{{item.chunkSize}}</td>
+							<td>{{item.userId}}</td>
+							<td><span class="label label-info"><a
+									href="/fileapi/download?fileId={{item.id}}" >下载</a></span>
+								<span class="label label-danger"><a
+									href="/fileapi/delete?fileId={{item.id}}" ng-click="delete()">删除</a></span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<nav>
+					<ul class="pager">
+						<li><a href="javascript:;" ng-click="prev();">Previous</a></li>
+						<li><a href="javascript:;" ng-click="next();">Next</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</section>

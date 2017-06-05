@@ -1,0 +1,27 @@
+<div class="container-fluid" ng-controller="createBlog" ng-init="loadData()">
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<div class="form-group">
+				<input type="hidden" name="blog.id" id="blog.id" value="${blog.id }">
+				<input type="hidden" name="blog.author" id="blog.author"
+					value="${blog.author }" /> <input type="text" class="form-control"
+					id="title" name="blog.title" placeholder="请添加博客标题"
+					value="${blog.title }"> <input type="hidden"
+					name="blog.createTime" id="createTime">
+			</div>
+			<div class="form-group">
+				<label for="imageUrl" id="jae_tupiankongjian_upload">点我上传图片</label>
+				<input type="text" class="form-control" id="imageUrl"
+					name="blog.imageUrl" value="${blog.imageUrl }"
+					placeholder="输入图片地址或上传图片">
+			</div>
+			<div class="form-group">
+				<script id="editor" name="blog.content" type="text/plain"
+					style="height: 300px;"></script>
+			</div>
+			<button type="button" class="btn btn-default" id="btn">Submit</button>
+		</div>
+		<div class="col-md-2"></div>
+	</div>
+</div>

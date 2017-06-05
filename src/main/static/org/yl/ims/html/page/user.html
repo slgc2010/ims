@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>欢迎光临</title>
+ <link rel="shortcut icon" href="http://static.letle.com/letle/heart.ico" type="image/x-icon">
+ 
+
+<script type="text/javascript">
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+</script>
+</head>
+<body>
+<div id="welcomeflash" style="position:fixed;_position:absolute;top:0;left:0;background-color:white;text-align:center;width:100%;z-index:30000;height:10000px;" onclick="wSwf_obj_swf.call(this)">
+  <div style="width:100%;position:absolute;left:0;top:0;background:white;height:100%;">
+    <object type="application/x-shockwave-flash" data="https://i.gtimg.cn/qzone/space_item/orig/7/81655.swf" width="1024" height="590" name="welFlash">
+      <param name="movie" value="https://i.gtimg.cn/qzone/space_item/orig/7/81655.swf" />
+      <param name="quality" value="autohigh" />
+      <param name="wmode" value="transparent" />
+      <param name="menu" value="false" />
+      <param name="allowScriptAccess" value="always" />
+      <a href="http://www.adobe.com/go/getflash"> <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="��ȡflash������" /> </a>
+    </object>
+  </div>
+  <div style="width:100%;cursor:pointer;position:absolute;left:0px;background:url(about:blank);opacity:0;z-index:30001;top:0px;height:100%" onclick="MM_goToURL('parent','birth.html');return document.MM_returnValue" onfocus="user.html"></div>
+</div>
+<script type="text/javascript">
+(function() {
+	var wel=document.getElementById('welcomeflash'),timer,ch,_s=new Function;
+	window.wSwf_obj_swf = window.wSwf_obj_swf_s=function() {
+		document.documentElement.style.overflow = "";
+		wel && (wel.innerHTML = '');
+		wel && document.body.removeChild(wel);
+		window.removeEventListener?window.removeEventListener('resize',_s):(window.detachEvent&&window.detachEvent('onresize',_s));
+		location.href="/cake#/blog";
+		clearTimeout(timer);
+	};
+	timer = setTimeout(wSwf_obj_swf, 10000);
+	if (wel) {
+		_s=function(){
+			ch=document.documentElement.clientHeight;
+			wel.children[0].style.paddingTop = Math.floor(Math.max(0,ch - 590) / 2)+'px';
+		};
+		document.cookie = 'welcomeflash=627879686_77030;domain=qzone.qq.com';
+		document.documentElement.style.overflow = "hidden";
+		_s();
+		window.addEventListener?window.addEventListener('resize',_s,false):(window.attachEvent&&window.attachEvent('onresize',_s));
+	}
+})();
+</script>
+</body>
+</html>
+</div>

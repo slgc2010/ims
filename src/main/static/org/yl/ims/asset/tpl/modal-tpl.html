@@ -1,0 +1,26 @@
+<div class="modal fade " tabindex="-1" role="dialog"
+	aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	<div class="modal-dialog"
+		ng-class="{md: '', sm: 'modal-sm',lg: 'modal-lg'}[size]">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<h4 class="modal-title" ng-class="titleCls" id="mySmallModalLabel">{{title}}</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row" ng-html="content | to_trusted"></div>
+				<div class="row" ng-show="isConfirm">
+					<div class="row pull-right">
+						<button type="button" class="btn btn-default" data-dismiss="modal"
+							ng-click="cancel()">取消</button>
+						<button type="button" class="btn btn-primary margin-xs-h"
+							ng-click="confirm()" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="imessage">
+<head>
+<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"  />
+<meta name="keywords" content="请叫我小C" />
+<meta name="description" content="很多年，很多事,我的个人博客" />
+<title>个人空间</title>
+<link href="${imsPath}/asset/favicon.ico" type="image/x-icon" rel=icon>
+<link href="${imsPath}/asset/favicon.ico" type="image/x-icon" rel="shortcut icon">
+<link href="${imsPath}/asset/css/bootstrap.min.css" media="screen"	rel="stylesheet" type="text/css" />
+<link href="${imsPath}/asset/css/style.css" media="screen"	rel="stylesheet" type="text/css" />
+<link href="${imsPath}/asset/css/imessage.css" media="screen"	rel="stylesheet" type="text/css" />
+<link href="http://www.yunlinsu.com/style/default.css" media="screen"	rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="${imsPath}/asset/js/previewCount.js"></script>
+<script type="text/javascript" src="${imsPath}/asset/js/jquery.min.js"></script>
+<script type="text/javascript"	src="${imsPath}/asset/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${imsPath}/asset/js/angular.min.js"></script>
+<script type="text/javascript"	src="${imsPath}/asset/js/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="${imsPath}/asset/js/scroll.js"></script>
+<script type="text/javascript" src="${imsPath}/asset/js/duoshuo.js"></script>
+<script type="text/javascript" src="${imsPath}/asset/js/ajaxfileupload.js"></script>
+
+<!-- ue -->
+<!-- <script type="text/javascript" charset="utf-8"
+ 	src="/js/ue/ueditor.config.js"></script>
+ <script type="text/javascript" charset="utf-8"
+ 	src="/js/ue/ueditor.all.min.js"></script>
+ <script type="text/javascript" charset="utf-8"
+ 	src="/lang/zh-cn/zh-cn.js"></script>-->
+<script type="text/javascript">
+	(function() {
+		var config = angular.module('config', []);
+		var cfg = {};
+		cfg.root = '${rootPath}';
+		cfg.ims = cfg.root + '/guest';
+		cfg.path = window.path = {};
+		cfg.path.ims = cfg.ims;
+		config.constant('cfg', cfg);
+	})();
+</script>
+<script type="text/javascript" src="${imsPath}/asset/js/imessage.js"></script>
+<script type="text/javascript"	src="${imsPath}/asset/js/ims-controller.js"></script>
+
+</head>
+<body img-bing>
+	<header class="hero-unit no-radius">
+	<p>&nbsp;</p>
+	<div class="center">
+		<a href="/admin#/blog"> <img class="img-circle" alt=""
+			src="http://q2.qlogo.cn/headimg_dl?bs=qq&dst_uin=1060615684&src_uin=1060615684&fid=1060615684&spec=100&url_enc=0&referer=bu_interface&term_type=PC"></a>
+		<p><b>小慧慧</b></p>
+		<p><show-msg></show-msg></p>
+	</div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12" ui-view></div>
+		</div>
+	</div>
+</body>
+</html>
